@@ -13,6 +13,11 @@ public class HelloController {
     @Value("${app.testMessage}")
     String testMessage;
 
+    @GetMapping("/")
+    public String inicio(){
+        return "Bienvenido a mi aplicacion!!!";
+    }
+
     @GetMapping("/hola")
     public String holaMundo(){
         return devMessage;
